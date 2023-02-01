@@ -32,12 +32,13 @@ def storeValue(): #this is the function that gets called when the button is pres
     dname = destination_folder.get()
     
 def call_tech():
-    technical_gui.technical_gui(sname, dname)
+    technical_gui.gui(sname, dname)
+    window.destroy()
 
 #initialize buttons
 Button(
     window,
-    text= "Select Source Folder" ,
+    text= "Select Source and Destination Folder" ,
     padx= 10,
     pady= 5,
     command = lambda: [storeValue(), call_tech()] #call second screen here that actually does stuff
